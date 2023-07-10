@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PrimeiroProjeto';
+  title = 'Hello World';
+  paragraph = ' Tratase de um projeto de Hello World; Do qual onde aprendo a desensolver com Angular!';
 }
