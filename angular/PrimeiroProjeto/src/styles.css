@@ -7,4 +7,16 @@
 
 hr {
     margin: 1em;
+    width: auto;
+    height: 2px;
+}
+
+body {
+    padding-bottom: 500px;
+}
+
+.aula {
+    border-bottom: 1px solid red;
+    padding: 2em;
+    margin-bottom: 1em;
 }
