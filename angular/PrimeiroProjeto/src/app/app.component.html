@@ -1,22 +1,23 @@
-<div class="aula">
-<h1>{{title}}</h1>
-<p>{{paragraph}}</p>
-</div>
-<!-- Importa o Component -->
-<app-first-component></app-first-component>
-<!-- Importa o parentData -->
-<app-parent-data [name]="userName" [userData]="userData"></app-parent-data>
-<!-- Importa o Directives -->
-<app-directives></app-directives>
-<!-- Importa o IfRender -->
-<app-if-render></app-if-render>
-<!-- Importa o Eventos -->
-<app-eventos></app-eventos>
-<!-- Importa o Emitter -->
-<app-emitter></app-emitter>
-<!-- Importa o List Render -->
-<app-list-render></app-list-render>
-<!-- Importa o ... -->
-<app-pipes></app-pipes>
-<!-- Importa o ... -->
-<app-two-way-binding></app-two-way-binding>
+<header>
+    <nav>
+        <a routerLink="/">Home </a>
+        <a routerLink="/list">Lista</a>
+        <a routerLink="/parentData">parentData</a>
+        <a routerLink="/directives">directives</a>
+        <a routerLink="/ifRender">ifRender</a>
+        <a routerLink="/eventos">eventos</a>
+        <a routerLink="/Emitter">Emitter</a>
+        <a routerLink="/pipes">pipes</a>
+        <a routerLink="/twobinding">twobinding</a>
+    </nav>
+    <div class="aula">
+        <h1>{{title}}</h1>
+        <p>{{paragraph}}</p>
+    </div>
+</header>
+<article>
+    <router-outlet></router-outlet>
+</article>
+<footer>
+    <p></p>
+</footer>

@@ -20,3 +20,11 @@ body {
     padding: 2em;
     margin-bottom: 1em;
 }
+
+a {
+    font-size: 1.3em;
+    color: brown;
+    text-decoration: none;
+    cursor:pointer;
+    padding: .2em;
+}
