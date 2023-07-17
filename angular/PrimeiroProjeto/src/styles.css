@@ -16,7 +16,7 @@ body {
 }
 
 .aula {
-    border-bottom: 1px solid red;
+    border-bottom: .18em dashed red;
     padding: 2em;
     margin-bottom: 1em;
 }
