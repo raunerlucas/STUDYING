@@ -9,10 +9,14 @@ import { EventosComponent } from './components/eventos/eventos.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 const routes: Routes = [
   { path: '',component: FirstComponentComponent},
   { path: 'list',component: ListRenderComponent},
+  { path: 'list/:id',component: ItemDetailComponent}, 
+
+
   { path: 'parentData',component: ParentDataComponent},
   { path: 'directives',component: DirectivesComponent},
   { path: 'ifRender',component: IfRenderComponent},
