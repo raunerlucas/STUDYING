@@ -11,6 +11,7 @@ import { MessagesService } from 'src/app/services/messages.service';
 })
 export class MessagesComponent {
   faTimes = faTimes;
+  
   constructor(public messagesService: MessagesService){
 
   }
