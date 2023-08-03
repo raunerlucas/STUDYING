@@ -14,12 +14,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
   allMoments: Moment[] = [];
   moments: Moment[] = [];
-
   baseApiUrl = environment.baseApiUrl;
 
+  faSearch = faSearch;
+  searchTerm: string = '';
   // todo search 
 
   constructor(private momentService: MomentService){
@@ -40,5 +40,14 @@ export class HomeComponent {
     })
   }
 
+  search(event : Event): void{
+
+    const target = event.target as HTMLInputElement;
+    const value = target.value
+
+    this.moments = this.allMoments.filter(moment => {
+      return moment.title.toLowerCase().includes(value)
+    })
+  }
 
 }
