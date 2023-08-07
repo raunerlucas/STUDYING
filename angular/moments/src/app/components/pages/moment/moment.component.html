@@ -12,13 +12,13 @@
             <fa-icon [icon]="faEdit"></fa-icon>
             Editar 
         </a>
-        <button class="remove-btn">
+        <button class="remove-btn" (click)="removeHandler(moment.id!)">
             <fa-icon [icon]="faTime"></fa-icon>
             Excluir
         </button>
      </div>
      <!-- Tod's comentarios -->
      <div class="comments">
-        <p>Comentarios</p>
+        <h3>Comentarios (0):</h3>
      </div>
 </div>
