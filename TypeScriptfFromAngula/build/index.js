@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 //  Tipos primitivos Var
 let texto = "tipo string";
 let num = 1;
@@ -121,3 +130,41 @@ function callPhone(phone) {
     return phone;
 }
 console.log(callPhone(21221112));
+// funcoes Asincronas
+function getDataBase(id) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return "felip";
+    });
+}
+let arroz2 = {
+    id: 1,
+    nome: "arroz"
+};
+// Clases
+class Personagem {
+    constructor(Forca, Abilidade, Nome) {
+        this.name = Nome;
+        this.stregth = Forca;
+        this.skill = Abilidade;
+    }
+    attack() {
+        console.log(`Attack with ${this.stregth} points`);
+    }
+}
+// modificadores de Acesso Public, Private Protected exention
+class Magia extends Personagem {
+    constructor(Forca, Abilidade, name, Tipo) {
+        super(Forca, Abilidade, name);
+        this.mp = 100;
+        this.tipo = Tipo;
+    }
+}
+const p1 = new Personagem(10, 15, "Ryul");
+const p2 = new Magia(12, 35, "Foxs", "Fire");
+// generics
+// Os três pontinhos (espredi) siguinifica que posso trabalhar com varios itens daquele tipo
+function concatArray(...itens) {
+    return new Array().concat(...itens);
+}
+const numArray = concatArray([1, 5], [3]);
+console.log(numArray);

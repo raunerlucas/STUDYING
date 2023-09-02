@@ -202,4 +202,63 @@ class Magia extends Personagem{
 const p1 = new Personagem(10, 15,"Ryul")
 const p2 = new Magia(12,35,"Foxs","Fire")
 
+ // generics
+    // Os três pontinhos (espredi) siguinifica que posso trabalhar com varios itens daquele tipo
+ function concatArray<T>(...itens: T[]): T[] {
+    return new Array().concat(...itens)
+ }
+
+ const numArray = concatArray<number[]>([1,5], [3])
+ const stringArray = concatArray<String[]>(["rauner","Lucas"], ["muit"])
+ console.log(numArray);
+ console.log(stringArray);
  
+
+ //decorators
+function ExibirNome(target: any) {
+    console.log(target);
+}
+
+@ExibirNome
+class Funcionario{}
+
+function ApiVersion(version:string){
+    return (target:any) => {
+        Object.assign(target.prototype, {__version:version})
+    }
+}
+
+
+@ApiVersion("1.0")
+class Api{}
+
+const apiTeste = new Api();
+console.log(apiTeste.__version);
+
+
+// attribute decorator
+function minLength(length:number){
+    return (target: any, key: string) => {
+        let _value = target[key];
+        
+        const getter =() => _value;
+        const setter =(value: string) => {if (value.length < length) {
+            throw new Error(`Tamanho menor do que ${value.length}`);
+        }   else {_value = value}
+        };
+
+        Object.defineProperty(target, key, {get: getter,set: setter});
+    }
+}
+
+
+class Api2{
+    @minLength(3)
+    name: string;
+
+    constructor(name:string){
+        this.name = name;
+    }
+}
+
+const apiTeste2 = new Api2("produto");
