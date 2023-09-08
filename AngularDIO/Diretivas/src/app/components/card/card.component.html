@@ -1,0 +1,49 @@
+
+<!-- Diretiva de If sempre está em True, ser for false esconde o conteudo que esta vinculada -->
+<p *ngIf="false">Conteudo do card, não está sendo exibido</p>
+<p *ngIf="true">Conteudo do card, Mas esse está sendo exibido</p>
+<hr>
+
+<!-- Diretiva de If com data Biding -->
+<p *ngIf="isAlivePtag">P com Dibing, recebendo FALSE no inicio</p>
+<p *ngIf="!isAlivePtag">P com Dibing, recebendo TRUE no inicio</p>
+<button type="button" (click)="alter()">BiDing P</button>
+<hr>
+
+<!-- NgFor serve para fazer um for em tag que vai ser repetir varias vezes -->
+<table>
+  <h3></h3>Produtos
+  <!-- let i recebe o index que da para trabalhar com ele -->
+  <tr *ngFor=" let produto of produtos; let i = index" (click)="remove(i)">
+    {{produto}} ---
+    {{i}}
+  </tr>
+  <button type="button"(click)="add()">Adicionar</button>
+</table>
+<hr>
+
+<!-- ngSwitch trabalhando com case -->
+<div [ngSwitch]="menuType">
+  <div *ngSwitchDefault>
+    <ul>
+      <li>editar Perfil</li>
+      <li>Add Card </li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <ul>
+      <li>editar Perfil</li>
+      <li>Add Card </li>
+      <li>gerenciar Usuarios </li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'superuser'">
+    <ul>
+      <li>editar Perfil</li>
+      <li>Add Card </li>
+      <li>gerenciar Usuarios </li>
+      <li>gerenciar Admins </li>
+    </ul>
+  </div>
+</div>
+

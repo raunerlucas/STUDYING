@@ -1,0 +1,43 @@
+<!-- Colocando class com o ng class -->
+
+<h1 [ngClass]="estilo">Esse tests muda de cor dinamicamente</h1>
+
+<button (click)="trocaEstilo()">Trocar</button>
+<hr>
+
+<!-- colcando estilo usando ngStyle -->
+<h1 [ngStyle]="{'background':corfundo, 'color': colorfont}">Curso Angular</h1>
+<hr>
+
+<!-- ngModel (FormsModule, importar primeiro lá no app.mudule) funciona para trabalha com formularios-->
+
+<label>
+  <input type="text" [(ngModel)]="item">
+  <button type="button" (click)="addLista()"> ADD</button>
+  <br> {{item}}
+</label>
+<ul>
+  <li *ngFor="let item of listaCompra, let i = index">
+    {{item}}
+  </li>
+</ul>
+<hr>
+
+<!-- NgTamplate Usado como um pedaço que pode ou não ser mostrado -->
+<!-- Por padrão não vem abilitado precisa ser abilitado com o true -->
+<ng-template ngIf="true">
+  <a href="#">FIM COMPRA</a>
+</ng-template>
+<br>
+<ng-template [ngIf]="isEnableBlock">
+  <a href="#">Add Card COMPRA</a>
+</ng-template>
+<hr>
+
+<!-- NgContent permite pegar alguma coisa do pai para o filho -->
+<ng-content select="h2"></ng-content>
+<ng-content select="p"></ng-content>
+
+<hr>
+<hr>
+
