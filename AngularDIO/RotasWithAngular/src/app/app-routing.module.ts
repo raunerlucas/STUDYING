@@ -6,9 +6,15 @@ import { CardComponent } from './pages/portifolio/card/card.component';
 
 const routes: Routes = [
   {path: '', component: TitleComponent, pathMatch: 'full'},
-  {path: 'portifolio', component: CardComponent},
+
+  // no casso portifoio é a rota principal e portifolio/:id se torna filha dessa
+  // pai
+  {path: 'portifolio', component: CardComponent, children: [
+    // filha
+    {path: ':id', component: CardComponent}]},
   // Rota coriga no caso essa vai redirecionar para o TitleComponent
   {path: '**', redirectTo: ''}
+
 
 ];
 
