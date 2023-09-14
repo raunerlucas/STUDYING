@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="content_title">
+    <h3>{{name}}</h3>
+  </div>
+  <div class="content_photo">
+    <img src="{{image}}" alt="{{name}}" srcset="">
+  </div>
+  <div class="content_type">
+    <span class="type {{type}}" *ngFor="let type of attributsTypes">{{type}}</span>
+  </div>
+</div>
