@@ -23,13 +23,28 @@
   height: 70%;
   width: 85%;
   border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.content_photo img {
+  image-rendering: pixelated;
+  image-orientation: from-image;
+  width: 14em;
+}
+
 
 .content_type{
   display: flex;
   flex-direction: row;
   align-items: center;
 
+}
+
+.content_title {
+  text-transform: uppercase;
 }
 
 .type{
@@ -42,6 +57,12 @@
   border-radius: 6px;
 
   filter:brightness(1);
+}
+
+input {
+  color: black;
+  font-weight: 700;
+  margin: 2em 2.5em;
 }
 
 
