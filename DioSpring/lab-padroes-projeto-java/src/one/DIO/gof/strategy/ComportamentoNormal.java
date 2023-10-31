@@ -1,2 +1,8 @@
-package one.DIO.gof.strategy;public class ComportamentoNormal {
+package one.DIO.gof.strategy;
+
+public class ComportamentoNormal implements Comportamento{
+    @Override
+    public void mover() {
+        System.out.println("Monvendo-se normalmente");
+    }
 }

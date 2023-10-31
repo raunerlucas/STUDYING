@@ -1,4 +1,4 @@
-package dio.springboot;
+package dio.springboot.PPassos;
 
 import org.springframework.stereotype.Component;
 

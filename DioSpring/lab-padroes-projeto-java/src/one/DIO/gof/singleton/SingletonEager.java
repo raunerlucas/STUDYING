@@ -1,4 +1,4 @@
-package one.DIO.gof;
+package one.DIO.gof.singleton;
 
 /**
  * Singleton "Apreçado"

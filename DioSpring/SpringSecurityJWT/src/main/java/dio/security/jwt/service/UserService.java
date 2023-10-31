@@ -1,4 +1,4 @@
-package dio.security.jwt.security;
+package dio.security.jwt.service;
 import dio.security.jwt.model.User;
 import dio.security.jwt.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
