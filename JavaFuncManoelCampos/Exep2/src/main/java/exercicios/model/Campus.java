@@ -1,4 +1,4 @@
-package model;
+package exercicios.model;
 
 /**
  * Representa um campus de uma instituição de ensino.
