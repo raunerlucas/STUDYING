@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Inicial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="22dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Conversor de Moedas"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <EditText
+        android:id="@+id/numMoedas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:ems="10"
+        android:fitsSystemWindows="false"
+        android:hint="Número de Moedas"
+        android:inputType="number"
+        android:textAlignment="center"
+        tools:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/cotMoeda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:ems="10"
+        android:fitsSystemWindows="false"
+        android:hint="Cotação da Moeda"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:text="RESULTADO" />
+
+    <Button
+        android:id="@+id/BtnConvt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:text="CONVERTER"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:onClick="converter"
+        />
+
+</LinearLayout>
