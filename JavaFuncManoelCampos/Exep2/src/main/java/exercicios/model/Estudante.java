@@ -107,4 +107,12 @@ public class Estudante {
                 "Id: %6d Nome: %-30s Sexo: %c Nota: %5.2f Ano Grad: %4d %s",
                 id, nome, sexo, nota, anoGraduacao, cursos);
     }
+
+    public boolean isHomem() {
+        return sexo == 'M';
+    }
+
+    public boolean hasNota() {
+        return nota > 0;
+    }
 }

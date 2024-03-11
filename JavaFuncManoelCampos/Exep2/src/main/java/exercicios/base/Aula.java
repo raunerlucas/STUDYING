@@ -13,8 +13,8 @@ import java.util.List;
 public abstract class Aula {
     public static final long DEFAULT_SEED = 346324523L;
     protected static final int TOTAL_ESTUDANTES = 30;
-    private final StudentGenerator generator;
-    private final List<Estudante> estudantes;
+    protected final StudentGenerator generator;
+    protected final List<Estudante> estudantes;
     /**
      * Instancia a classe usando uma semente (valor inicial para o gerador de números aleatórios) fixa.
      * Assim, a cada execução os estudantes gerados e os dados deles serão os mesmos.
@@ -46,4 +46,5 @@ public abstract class Aula {
     public List<Estudante> getEstudantes() {
         return estudantes;
     }
+
 }
