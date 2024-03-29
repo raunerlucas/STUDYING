@@ -115,4 +115,11 @@ public class Estudante {
     public boolean hasNota() {
         return nota > 0;
     }
+    public boolean hasCurso() {
+        return curso != null;
+    }
+
+    public boolean isAprovado() {
+        return nota >= 6;
+    }
 }
