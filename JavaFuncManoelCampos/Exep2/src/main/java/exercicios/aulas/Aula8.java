@@ -3,6 +3,7 @@ package exercicios.aulas;
 import exercicios.base.Aula;
 import exercicios.model.Estudante;
 
+import java.util.AbstractMap.SimpleEntry;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,11 +40,23 @@ public class Aula8 extends Aula {
 //        System.out.println();
 //        mapPessComanda.forEach((chave, valor) -> System.out.println(chave + " -> " + valor));
 
+        // faz o import abaixo para o código ficar mais simples
+        // import static java.util.AbstractMap.SimpleEntry;
+
+        var novoMap = mapPessComanda
+                .entrySet()
+                .stream()
+                .map(entry -> new SimpleEntry<>(entry.getKey(), entry.getValue() * 0.9))
+                .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        novoMap.forEach((nome, val) -> System.out.printf("%s: %f\n", nome, val));
+/*
 
         Map<String, Double> mapaEstNomeNota = estudantes.stream().collect(
                 toMap(Estudante::getNome, Estudante::getNota)
         );
         mapaEstNomeNota.forEach((chave, valor) -> System.out.println(chave + " -> " + valor));
+*/
     }
 
     private static double getValue() {
