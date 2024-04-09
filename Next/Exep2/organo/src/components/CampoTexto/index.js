@@ -1,9 +1,12 @@
-import React from 'react';
 import './CampoTexto.css';
 
 const CampoTexto = (props) => {
 
     const placeholder = props.placeholder === undefined ? `Digite seu ${props.nome}` : props.placeholder
+
+    const aoDigitar = (evento) => {
+        props.aoAlterar(evento.target.value);
+    }
 
     return (
         <div className='campo-texto'>
@@ -11,7 +14,10 @@ const CampoTexto = (props) => {
                 {props.nome}
             </label>
             <input
-                type={props.tipo}
+                value={props.valor}
+                onChange={aoDigitar}
+                // Caso a propriedade obrigatório seja passada, o campo será obrigatório
+                required={!!props.obrigatorio}
                 placeholder={placeholder}
             />
         </div>

@@ -1,12 +1,19 @@
 import Banner from './components/Banner';
 import { Formulario } from './components/Formulario';
+import {useState} from "react";
 
 
 function App() {
-  return (
+    const [colbs, setColbs] = useState([])
+
+    const addColab = (colb) => {
+        setColbs([...colbs,colb])
+    };
+
+    return (
     <div>
       <Banner />
-      <Formulario />
+      <Formulario aoColaboradorCtd={cold => addColab(cold)} />
     </div>
   );
 }
