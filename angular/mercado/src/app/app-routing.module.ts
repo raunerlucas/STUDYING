@@ -5,7 +5,7 @@ import {PrimeiroComponent} from "./components/primeiro/primeiro.component";
 
 const routes: Routes = [
   {path: 'home',component: HomeComponent},
-  {path: 'cont', component: PrimeiroComponent},
+  {path: 'cont', loadChildren: () => import('./modules/navbar/navbar.module').then(m => m.NavbarModule)},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 
