@@ -1,5 +1,6 @@
 <h1>Home Page</h1>
 <p>var in pai {{ varPai }}</p>
 
-<app-banner [img]="varPai"></app-banner>
+<app-banner [img]="varPai" (onClick)="clicou($event)"></app-banner>
 
+<h4>{{result}}</h4>

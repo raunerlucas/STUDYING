@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -7,4 +7,6 @@ import {Component, Input} from '@angular/core';
 })
 export class BannerComponent {
   @Input() img!: any;
+
+ @Output() onClick:EventEmitter<String> = new EventEmitter()
 }

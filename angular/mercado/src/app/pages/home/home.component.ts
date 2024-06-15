@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   varPai: String = 'Uma variável que tem valor';
+  result!: String;
 
+
+  clicou(event: String) {
+    this.result = event;
+  }
+
+  protected readonly event = event;
 }
