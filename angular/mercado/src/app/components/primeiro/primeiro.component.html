@@ -1,1 +1,8 @@
-<p>primeiro works!</p>
+<h2>Componete works!</h2>
+<button type="button" (click)="actionOne()">
+  Ação 1
+</button>
+<h3>{{ cont }}</h3>
+<button *ngIf="cont > 0" type="button" (click)="actionTwo()">
+  Ação 2
+</button>
